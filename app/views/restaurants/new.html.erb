@@ -1,14 +1,10 @@
-<div class="container">
+
   <h1>Fill out the form below to add a new restaurant in our list</h1>
   <%= simple_form_for(@restaurant) do |f| %>
     <%= f.input :name %>
     <%= f.input :address %>
     <%= f.input :phone_number %>
     <%= f.input :category %>
-    <% if @restaurant.new_record? %>
-      <%= f.submit "Add a new restaurant", class: 'btn btn-info' %>
-    <% else %>
-      <%= f.submit "Update your restaurant!", class: 'btn btn-info' %>
-    <% end %>
-  <% end %>
-</div>
+    <%= f.submit "Add a new restaurant", class: 'btn btn-info' %>
+    <% end  %>
+
